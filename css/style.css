@@ -58,16 +58,14 @@ main li a{
     color: rgb(9, 80, 6);
 }
 
-footer{
+body .footer{
     width: 100%;
     padding: 10px 30px;
     background-color: rgb(9, 80, 6);
     text-align: center;
-    position: fixed;
     color: white;
 
 }
-footer a{
+body .footer a{
     color: rgb(226, 250, 210);
-    margin-bottom: 0.25rem;
 }

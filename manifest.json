@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "short_name": "WM",
+    "name": "Web Marker",
+    "description": "Store the webpages that you like to visit later",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "192": "./image/android-icon-192x192.png",
+            "180": "./image/apple-icon-180x180.png",
+            "152": "./image/apple-icon-152x152.png",
+            "144": "./image/apple-icon-144x144.png",
+            "120":"./image/apple-icon-120x120.png",
+            "96": "./image/favicon-96x96.png",
+            "76": "./image/apple-icon-76x76.png",
+            "72": "./image/apple-icon-72x72.png",
+            "60": "./image/apple-icon-60x60.png",
+            "57": "./image/apple-icon-57x57.png",
+            "32": "./image/favicon-32x32.png",
+            "16": "./image/favicon-16x16.png"
+        }
+    },
+    "icons": {
+        "192": "./image/android-icon-192x192.png",
+        "180": "./image/apple-icon-180x180.png",
+        "152": "./image/apple-icon-152x152.png",
+        "144": "./image/apple-icon-144x144.png",
+        "120":"./image/apple-icon-120x120.png",
+        "96": "./image/favicon-96x96.png",
+        "76": "./image/apple-icon-76x76.png",
+        "72": "./image/apple-icon-72x72.png",
+        "60": "./image/apple-icon-60x60.png",
+        "57": "./image/apple-icon-57x57.png",
+        "32": "./image/favicon-32x32.png",
+        "16": "./image/favicon-16x16.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+
+}
