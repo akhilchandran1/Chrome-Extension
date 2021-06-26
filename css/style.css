@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    margin: 0;
+    padding: 10px;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+main .mainHead{
+    text-align: center;
+    padding: 20px;
+    font-weight: lighter;
+}
+main .mainHead span {
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+    color: rgb(9, 80, 6);
+    font-stretch: ultra-expanded;
+}
+
+main input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid;
+    margin-bottom: 4px;
+}
+
+main button{
+    background: rgb(9, 80, 6);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid rgb(9, 80, 6);
+    font-weight: bold;
+}
+
+main #delete-btn{
+    background:white;
+    color: rgb(9, 80, 6);
+}
+
+main ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+}
+main li{
+    margin-top: 5px;
+}
+main li a{
+    color: rgb(9, 80, 6);
+}
+
+footer{
+    width: 100%;
+    padding: 10px 30px;
+    background-color: rgb(9, 80, 6);
+    text-align: center;
+    position: fixed;
+    color: white;
+
+}
+footer a{
+    color: rgb(226, 250, 210);
+    margin-bottom: 0.25rem;
+}
