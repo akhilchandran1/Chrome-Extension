@@ -31,6 +31,9 @@ main input{
     border: 1px solid;
     margin-bottom: 4px;
 }
+#error-msg-title, #error-msg-url{
+    color: red;
+}
 
 main button{
     background: rgb(9, 80, 6);
@@ -38,6 +41,7 @@ main button{
     padding: 10px 20px;
     border: 1px solid rgb(9, 80, 6);
     font-weight: bold;
+    border-radius: 5px;
 }
 
 main #delete-btn{

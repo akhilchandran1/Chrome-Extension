@@ -3,15 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <link rel="manifest" href="manifest.json">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" type="text/css">
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <main>
             <h1 class="mainHead"><span>W</span>eb <span>M</span>arker</h1>
-            <input type="text" id="input-el">
-            <button id="input-btn">Save Input</button>
-            <button id="tab-btn">Save Tab</button>
-            <button id="delete-btn">Delete All</button>
+            <input type="text" id="input-title-el" name="Web Page Title" placeholder="Web Page Title or Name" required>
+            <p id="error-msg-title"></p>
+            <input type="text" id="input-url-el" name="URL" placeholder="URL" required>
+            <p id="error-msg-url"></p>
+            <button id="input-btn">Save Input
+                <i class="uil uil-keyboard"></i>
+            </button>
+            <button id="tab-btn">Save Tab
+                <i class="uil uil-globe"></i>
+            </button>
+            <button id="delete-btn">Delete All
+                <i class="uil uil-trash-alt"></i>
+            </button>
 
             <ul id=ul-el>
             </ul>
