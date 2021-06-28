@@ -18,14 +18,19 @@ if(leadsFromLocalStorage && namesFromLocalStorage){
     render(myWebPages, myWebPageTitles)
 }
 
+const tabs=[
+    {url:"https://stackoverflow.com/questions/6871309/google-chrome-extension-get-page-information",
+    title: "Stackoverflow"}
+]
+
 tabBtn.addEventListener("click", function(){
-    chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
+   // chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
         myWebPages.push(tabs[0].url)
         myWebPageTitles.push(tabs[0].title)
         localStorage.setItem("myWebPages", JSON.stringify(myWebPages))
         localStorage.setItem("myWebPageTitles", JSON.stringify(myWebPageTitles))
         render(myWebPages, myWebPageTitles)
-    })
+    //})
 })
 
 function render(WebURL, webTitle){
@@ -36,9 +41,10 @@ function render(WebURL, webTitle){
         <li onmouseover="changeToUrl()" onmouseout="changeToTitle()">
             <a target='_blanck' id="web-mark-el" href = '${WebURL[i]}'>
             ${webTitle[i]}
+            <i class="uil uil-angle-down"></i>
             </a>
         </li>
-        <p id="url-reveal-el"></p>`
+        <span id="url-reveal-el"></span><hr>`
     }
     ulEl.innerHTML = listItems
 }
@@ -54,6 +60,8 @@ deleteBtn.addEventListener("click", function(){
 })
 
 inputBtn.addEventListener("click", function(){
+    const errorUrlMsg = "*** Web address/URL is required ***"
+    const errorTitleMsg = "*** Web page Title/Name is required ***"
     if(inputTitleEl.value?.trim().length > 0 && inputUrlEl.value?.trim().length > 0){
         console.log()
         if(validURL(inputUrlEl.value)){
@@ -72,13 +80,13 @@ inputBtn.addEventListener("click", function(){
             errorMsgTitle.textContent = ""
         } 
     }else if(inputTitleEl.value?.trim().length > 0 === false && inputUrlEl.value?.trim().length > 0 === false){
-        errorMsgTitle.textContent = "Web page Title/Name is required"
-        errorMsgUrl.textContent = "Web address/URL is required"
+        errorMsgTitle.textContent = errorTitleMsg
+        errorMsgUrl.textContent = errorUrlMsg
     }else if(inputTitleEl.value?.trim().length > 0 === false && inputUrlEl.value?.trim().length > 0 === true){
-        errorMsgTitle.textContent = "Web page Title/Name is required"
+        errorMsgTitle.textContent = errorTitleMsg
         errorMsgUrl.textContent = ""
     }else if(inputUrlEl.value?.trim().length > 0 === false && inputTitleEl.value?.trim().length > 0 === true){
-        errorMsgUrl.textContent = "Web address/URL is required"
+        errorMsgUrl.textContent = errorUrlMsg
         errorMsgTitle.textContent = ""
     }
 })

@@ -1,75 +1,116 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
-    margin: 0;
-    padding: 10px;
-    min-width: 400px;
-    min-height: 400px;
+main {
+  margin: 0;
+  padding: 10px;
+  min-width: 400px;
+  min-height: 400px;
 }
 
-main .mainHead{
-    text-align: center;
-    padding: 20px;
-    font-weight: lighter;
+.mainHead {
+  text-align: center;
+  padding: 20px;
+  font-weight: lighter;
+  color: rgb(235, 250, 224);
+  background: rgb(11, 187, 1);
+  background: linear-gradient(
+    0deg,
+    rgba(15, 162, 8, 1) 0%,
+    rgba(9, 80, 6, 1) 100%
+  );
 }
-main .mainHead span {
-    font-weight: bold;
-    font-stretch: ultra-expanded;
-    color: rgb(9, 80, 6);
-    font-stretch: ultra-expanded;
-}
-
-main input{
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid;
-    margin-bottom: 4px;
-}
-#error-msg-title, #error-msg-url{
-    color: red;
+.mainHead span {
+  font-weight: bold;
+  font-stretch: ultra-expanded;
+  color: rgb(115, 250, 110);
+  font-stretch: ultra-expanded;
 }
 
-main button{
-    background: rgb(9, 80, 6);
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid rgb(9, 80, 6);
-    font-weight: bold;
-    border-radius: 5px;
+main input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid;
+  margin-bottom: 4px;
+}
+#error-msg-title,
+#error-msg-url {
+  color: red;
 }
 
-main #delete-btn{
-    background:white;
-    color: rgb(9, 80, 6);
+button {
+  background: rgb(9, 80, 6);
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid rgb(9, 80, 6);
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-main ul{
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-
-}
-main li{
-    margin-top: 5px;
-}
-main li a{
-    color: rgb(9, 80, 6);
+#delete-btn {
+  background: white;
+  color: rgb(9, 80, 6);
 }
 
-body .footer{
-    width: 100%;
-    padding: 10px 30px;
-    background-color: rgb(9, 80, 6);
-    text-align: center;
-    color: white;
-
+.footer {
+  width: 100%;
+  padding: 10px 30px;
+  background-color: rgb(9, 80, 6);
+  text-align: center;
+  color: white;
 }
-body .footer a{
-    color: rgb(226, 250, 210);
+.footer a {
+  color: rgb(226, 250, 210);
+  text-decoration: none;
+}
+
+ul {
+  counter-reset: index;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  counter-increment: index;
+  display: flex;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+}
+
+li a {
+  color: rgb(9, 80, 6);
+  text-decoration: none;
+}
+
+li::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  min-width: 50px;
+  padding-right: 12px;
+  font-variant-numeric: tabular-nums;
+  align-self: flex-start;
+  background-image: linear-gradient(to bottom, rgb(160, 255, 72), rgb(4, 88, 2));
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+li + li {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@use postcss-preset-env {
+  stage: 0;
+  autoprefixer: {
+    grid: true;
+  }
+  browsers: last 2 versions;
 }
